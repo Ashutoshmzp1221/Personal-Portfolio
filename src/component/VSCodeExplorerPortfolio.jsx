@@ -187,7 +187,7 @@ export default function VSCodeExplorerPortfolio() {
         </section>
 
         <footer className="h-6 bg-[#007acc] flex items-center px-4 text-white text-xs select-none border-t border-blue-700">
-          <div>VS Code Portfolio - Shivam Kumar</div>
+          <div>VS Code Portfolio - Ashutosh Dwivedi</div>
           <div className="ml-auto flex space-x-4">
             <div>UTF-8</div>
             <div>Ln 1, Col 1</div>
