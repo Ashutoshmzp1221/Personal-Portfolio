@@ -4,7 +4,7 @@ import twitterImg from "../assests/images/twitterImg.png";
 import liveLineImg from "../assests/images/liveLineImg.png";
 import hotelImg from "../assests/images/hotelImg.png";
 import tourImg from "../assests/images/tourImg.jpg";
-import educationManagementImg from "../assests/images/educationmanagement.jpeg";
+
 
 const projects = [
   {
@@ -46,13 +46,6 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     link: "https://github.com/Ashutoshmzp1221/Tour-Project",
     image: tourImg,
-  },
-  {
-    title: "Education Admin Management",
-    description:
-      "A school automation system to manage timetables, grades, assignments, announcements, and parent/student portals in real-time.",
-    tech: ["React.js", "Node.js", "MongoDB"],
-    image: educationManagementImg,
   },
 ];
 
