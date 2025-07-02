@@ -39,10 +39,6 @@ export default function AchievementCertifacte() {
       title: "Elite-Gold medal",
       description: "🏆 Introduction to Internet of Things",
     },
-    {
-      title: "Academic Excellence Award",
-      description: "🎓 Honored for consistent academic performance during MCA (2024).",
-    },
   ];
 
   return (
