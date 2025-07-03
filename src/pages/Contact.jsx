@@ -7,42 +7,51 @@ export default function Contacts() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+  
+    const email = form.current.elements.email.value;
+    const name = form.current.elements.name.value;
+    const message = form.current.elements.message.value;
+  
     emailjs
-      .sendForm("service_iyw1s0b", "template_mwtb8od", form.current, "Mw_Kfh0fzia_Psg_Q")
+      .sendForm("service_ashutosh", "template_60s6heo", form.current, "ijK1KAqOlqXMj6C-f")
       .then(
         (result) => {
           console.log("Email sent successfully:", result.text);
           alert("Message sent successfully!");
-          sendAutoReply(form.current.elements.email.value, form.current.elements.name.value);
+  
+          
+          sendAutoReply(email, name, message);
         },
         (error) => {
           console.error("Failed to send email:", error.text);
           alert("Failed to send message. Please try again.");
         }
       );
-
-    e.target.reset();
+  
+    e.target.reset(); 
   };
+  
 
-  const sendAutoReply = (toEmail, fromName) => {
+  const sendAutoReply = (toEmail, fromName, message) => {
     emailjs
       .send(
-        "service_iyw1s0b",
-        "template_c0719ww",
+        "service_ashutosh",
+        "template_c6jzqwm", 
         {
-          to_email: toEmail,
-          from_name: "Ashutosh Dwivedi",
-          message_html: `Hello ${fromName},\n\nThank you for your message. We have received your inquiry and will respond shortly.\n\nBest regards,\nAshutosh Dwivedi`,
+          to_email: toEmail,              
+          from_name: fromName,           
+          message_html: message,          
         },
-        "YOUR_USER_ID"
+        "ijK1KAqOlqXMj6C-f"              
       )
       .then(
-        (result) => console.log("Auto-reply sent successfully:", result.text),
-        (error) => console.error("Failed to send auto-reply:", error.text)
+        (result) => console.log("✅ Auto-reply sent:", result.text),
+        (error) => console.error("❌ Auto-reply failed:", error.text)
       );
   };
-
+  
+  
+  
   return (
     <section className="text-white font-mono text-sm px-4">
       <h2 className="text-base font-bold text-gray-500 mb-4"><span className="text-gray-500">{`//`}</span> Contact Me</h2>
